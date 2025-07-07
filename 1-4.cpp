@@ -14,7 +14,7 @@ double pareto(double a, double boundary) {
 }
 
 int main() {
-    std::srand(static_cast<unsigned int>(std::time(nullptr))); 
+    std::srand(static_cast<unsigned int>(std::time(nullptr)));
 
     const int a = 2;
     const double boundary = 1;
@@ -28,8 +28,8 @@ int main() {
         y[i] = value;
     }
 
-    plt::ylabel("Count");
-    plt::xlabel("Random Value [x0.1]");
+    plt::ylabel("Value");
+    plt::xlabel("Count");
     plt::plot(y);
     plt::show();
 }

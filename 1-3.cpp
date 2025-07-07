@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <cmath>
+#include <ctime>
 #include <vector>
 #include "matplotlib-cpp/matplotlibcpp.h"
 
@@ -12,6 +13,8 @@ double pareto(double a, double boundary) {
 }
 
 int main() {
+    std::srand(static_cast<unsigned int>(std::time(nullptr)));
+
     const int a = 2;
     const double boundary = 1;
     const int N = 20000;
@@ -24,7 +27,7 @@ int main() {
     }
 
     plt::ylabel("Count");
-    plt::xlabel("Random Value [x0.1]");
+    plt::xlabel("Random Value");
     plt::bar(distributions);
     plt::show();
 }
