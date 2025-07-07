@@ -6,7 +6,7 @@
 
 namespace plt = matplotlibcpp;
 
-double exponential(double lambda) {
+double pareto(double lambda) {
     double random = static_cast<double>(rand()) / RAND_MAX;
     return -std::log(1.0 - random) / lambda;
 }
@@ -17,7 +17,7 @@ int main() {
 
     std::vector<double> distributions(101, 0);
     for (int i = 0; i < N; ++i) {
-        double value = exponential(lambda);
+        double value = pareto(lambda);
         int index = static_cast<int>(value / 0.1);
         distributions[std::min(index, 100)]++;
     }
