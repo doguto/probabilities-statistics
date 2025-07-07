@@ -1,4 +1,7 @@
 書くプログラムは.zip内のファイルを参照していただきたい。
+また、以下のリンクでも各プログラムや画像を確認できるようにした。
+https://github.com/doguto/probabilities-statistics
+
 
 問1-1. 
   省略
